@@ -10,3 +10,26 @@
     color: white;
   }
 }
+
+.empty {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.empty a,
+.empty a:visited {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.empty-cart {
+  background-color: rgb(255, 58, 9);
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  font-weight: 400;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  width: 20%;
+}
