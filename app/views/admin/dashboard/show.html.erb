@@ -1,2 +1,6 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin Dashboard</h1>
+<div class="alert alert-primary">
+  <p>Number of products: <%= @total_products %></p>
+  <a href="/admin/products" class="text-decoration-none text-secondary">Visit admin products page</a>
+</div>
+<div class="alert alert-primary">Number of categories: <%= @total_categories %></div>
