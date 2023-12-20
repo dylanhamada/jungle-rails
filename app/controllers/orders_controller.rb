@@ -1,7 +1,28 @@
 class OrdersController < ApplicationController
 
   def show
+    # find order
     @order = Order.find(params[:id])
+
+    # find line items
+    @line_items = LineItem.where(order_id: params[:id])
+
+    # initialize empty array for each product
+    @products = []
+    
+    # add each product to @products
+    @line_items.each do |item|
+      puts item.quantity
+      current_product = Product.find(item.product_id)
+      product_hash = {
+        image: current_product.image,
+        name: current_product.name,
+        description: current_product.description,
+        quantity: item.quantity,
+        total: item["total_price_cents"]
+      }
+      @products.push(product_hash)
+    end
   end
 
   def create
