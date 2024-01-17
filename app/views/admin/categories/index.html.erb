@@ -1,0 +1,17 @@
+<section class="mt-5">
+  <header>
+    <h1>Admin &raquo; All Categories</h1>
+  </header>
+
+  <div>
+    <ul>
+      <% @categories.each do |category| %>
+        <li><%= category.name %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="well">
+    <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
+  </div>
+</section>
