@@ -1,3 +1,5 @@
+require 'active_support/all'
+
 require 'dotenv/rails-now'
 
 require_relative "boot"
